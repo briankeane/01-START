@@ -167,6 +167,7 @@ unsigned int YEL_LED_Timer;
 unsigned int	SW1dbTimer;
 unsigned char SW1PressedFlag;
 unsigned char SW1ActionTaken_Flag;
+unsigned char ToggleRedFlag;
 unsigned int	SW1HoldTime;
 unsigned int 	SW2dbTimer;
 unsigned char SW2PressedFlag;

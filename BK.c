@@ -130,7 +130,7 @@ int main()									// All c programs have to have a main() function.  After star
     
       // Take action here..
 			
-			RED_LED = LED_ON;
+			ToggleRedFlag = TRUE;
 
 
 			// Set action taken flag so this won't keep happening
@@ -264,7 +264,8 @@ void SysInit(void)
   SW2ActionTaken_Flag = FALSE;
   SW3dbTimer = 0;
   SW3PressedFlag = FALSE;
-  SW3ActionTaken_Flag = FALSE;  
+  SW3ActionTaken_Flag = FALSE;
+  ToggleRedFlag = FALSE;
 }
 
 
@@ -382,6 +383,10 @@ void __ISR( _TIMER_1_VECTOR, ipl1) T1InterruptHandler( void)
 	
 		GRN_LED = !GRN_LED;					// The ! will toggle the value, so the GRN_LED will toggle once per second
 
+    if (ToggleRedFlag)
+    {
+      RED_LED = !RED_LED;
+    }
   }
 
 
