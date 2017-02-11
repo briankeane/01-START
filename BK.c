@@ -130,7 +130,7 @@ int main()									// All c programs have to have a main() function.  After star
     
       // Take action here..
 			
-			ToggleRedFlag = TRUE;
+			ToggleRedFlag = !ToggleRedFlag;
 
 
 			// Set action taken flag so this won't keep happening
